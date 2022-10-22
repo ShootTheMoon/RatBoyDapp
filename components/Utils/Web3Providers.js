@@ -54,10 +54,10 @@ const Web3Providers = (props) => {
   // Disconnect Wallet
   const disconnectWalletHandler = async () => {
     setAccount(null);
-    // if (provider) {
-    //   await provider.disconnect();
-    //   setProvider(null);
-    // }
+    if (provider) {
+      await provider.disconnect();
+      setProvider(null);
+    }
   };
 
   //MetaMask wallet

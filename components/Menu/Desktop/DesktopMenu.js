@@ -162,7 +162,7 @@ const WalletConnectButton = () => {
 
   return (
     <main>
-      {chainIndex == 0 ? (
+      {chainId == 56 ? (
         <div id="chainWrapper">
           <div className="chainSvg">{chainList[0].svg}</div>
           <div className="chainName">{chainList[0].name}</div>
