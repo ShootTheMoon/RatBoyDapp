@@ -1,0 +1,30 @@
+{
+  "name": "moonlabsv3",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@binance-chain/bsc-connector": "^1.0.0",
+    "@coinbase/wallet-sdk": "^3.5.3",
+    "@walletconnect/web3-provider": "^1.8.0",
+    "@web3modal/ethereum": "^2.0.0-alpha.6",
+    "@web3modal/react": "^2.0.0-alpha.6",
+    "ethers": "^5.7.1",
+    "framer-motion": "^6.3.11",
+    "lodash": "^4.17.21",
+    "lottie-react": "^2.3.1",
+    "next": "12.1.6",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "web3": "^1.8.0"
+  },
+  "devDependencies": {
+    "eslint": "8.17.0",
+    "eslint-config-next": "12.1.6"
+  }
+}

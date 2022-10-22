@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+html,
+body {
+    --main-color: #202020;
+    --secondary-color: rgb(32, 32, 32);
+    --action-color: #5cdb5c;
+    --action-color: #1c7a38;
+    --action-color: #11141a;
+    --action-color2: #47ffa0;
+    --text-color: #ff1111;
+    --border-radius: .6rem;
+    --border: 0.5px solid rgba(255, 255, 255, 0.1);
+    --box-shadow: .3rem .3rem .6rem rgba(0, 0, 0, 0.556);
+    padding: 0;
+    margin: 0;
+    font-size: 62.5%;
+    overflow-x: clip;
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 3rem;
+}
+
+h2 {
+    padding: 0;
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+h3 {
+    padding: 0;
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+h4 {
+    padding: 0;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+    font-weight: 300;
+    line-height: 2.5rem;
+    font-size: 1.5rem;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+* {
+    font-weight: 500;
+    box-sizing: border-box;
+    letter-spacing: .1rem;
+}
+
+/* Scrollbar */
+/* width */
+::-webkit-scrollbar {
+    position: relative;
+    width: 0rem;
+    z-index: 5;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--main-color);
+    z-index: 5;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+
+    background: var(--action-color);
+    border-radius: .2rem;
+    z-index: 5;
+    border: none;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--action-color);
+}
+
+.walletconnect-modal__mobile__toggle {
+    color: var(--secondary-color);
+}
+
+.walletconnect-connect__buttons__wrapper__wrap {
+    font-size: 1.3rem;
+}
