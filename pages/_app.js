@@ -20,10 +20,10 @@ function getWindowDimensions() {
 }
 //Dark Theme
 const darkTheme = {
-  MainColor: "#292e35",
-  MainColor2: "#21252b",
+  MainColor: "#080E15",
+  MainColor2: "#121e2c",
   HoverColor: "#3f454d",
-  ActionColor: "#5cdb5c",
+  ActionColor: "#0076FF",
   ActionColor2: "#1c7a38",
   TextColor: "#fff",
   TextColor2: "#cacaca",

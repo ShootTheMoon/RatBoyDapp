@@ -2,16 +2,12 @@
 
 html,
 body {
-    --main-color: #202020;
+    --main-color: #121e2c;
     --secondary-color: rgb(32, 32, 32);
     --action-color: #5cdb5c;
     --action-color: #1c7a38;
     --action-color: #11141a;
     --action-color2: #47ffa0;
-    --text-color: #ff1111;
-    --border-radius: .6rem;
-    --border: 0.5px solid rgba(255, 255, 255, 0.1);
-    --box-shadow: .3rem .3rem .6rem rgba(0, 0, 0, 0.556);
     padding: 0;
     margin: 0;
     font-size: 62.5%;

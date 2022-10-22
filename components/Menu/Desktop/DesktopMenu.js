@@ -1,9 +1,6 @@
 // React Imports
 import { useContext, useEffect, useState } from "react";
 // Component Imports
-import MenuDropdown from "./MenuDropdown";
-import DropdownItem from "./DropdownItem";
-import MenuItem from "./MenuItem";
 // Context Imports
 import { GlobalContext, ThemeContext } from "../../../pages/_app";
 import { Web3Context } from "../../Utils/Web3Providers";
@@ -158,49 +155,26 @@ const WalletConnectButton = () => {
   }, [account]);
   useEffect(() => {
     findChainId();
+    if (chainId != 56) {
+      switchChain(56);
+    }
   }, [chainId]);
 
   return (
     <main>
-      <MenuItem
-        item={
-          chainList[chainIndex].mainnet ? (
-            <div id="chainWrapper">
-              <div className="chainSvg">{chainList[chainIndex].svg}</div>
-              <div className="chainName">{chainList[chainIndex].name}</div>
-            </div>
-          ) : (
-            <div id="chainWrapper">
-              <div className="chainSvg testnet">{chainList[chainIndex].svg}</div>
-              <div className="chainName">{chainList[chainIndex].name}</div>
-            </div>
-          )
-        }
-        dropdown={true}
-      >
-        <MenuDropdown left={0} down={20}>
-          <DropdownItem category={true} name="Mainnets" />
-          {chainList.map((chain, i) => {
-            if (chain.mainnet) {
-              return (
-                <div key={i}>
-                  <DropdownItem function={() => switchChain(chain.id)} item={<div className="chainSvg">{chain.svg} </div>} name={chain.name} />
-                </div>
-              );
-            }
-          })}
-          <DropdownItem category={true} name="Testnets" />
-          {chainList.map((chain, i) => {
-            if (!chain.mainnet) {
-              return (
-                <div key={i}>
-                  <DropdownItem function={() => switchChain(chain.id)} item={<div className="chainSvg testnet">{chain.svg} </div>} name={chain.name} />
-                </div>
-              );
-            }
-          })}
-        </MenuDropdown>
-      </MenuItem>
+      {chainIndex == 0 ? (
+        <div id="chainWrapper">
+          <div className="chainSvg">{chainList[0].svg}</div>
+          <div className="chainName">{chainList[0].name}</div>
+        </div>
+      ) : (
+        <div id="chainWrapper">
+          <div className="chainSvg" style={{ border: ".2rem solid red", padding: ".2rem" }}>
+            {chainList[chainList.length - 1].svg}
+          </div>
+          <div className="chainName">{chainList[chainList.length - 1].name}</div>
+        </div>
+      )}
 
       <div id="buttonName" onClick={walletClickHandler}>
         Connect
@@ -219,7 +193,7 @@ const WalletConnectButton = () => {
 
         #chainWrapper {
           height: 3.5rem;
-          background-color: ${theme.MainColor};
+          background-color: ${theme.MainColor2};
           display: flex;
           justify-content: center;
           align-items: center;
@@ -230,16 +204,12 @@ const WalletConnectButton = () => {
           transition: 0.2s;
         }
 
-        #chainWrapper:hover {
-          background-color: ${theme.HoverColor};
-        }
-
         .chainSvg {
           padding: 0.4rem;
           display: flex;
           justify-content: center;
           align-items: center;
-          background-color: ${theme.MainColor2};
+          background-color: ${theme.MainColor};
           border-radius: 100rem;
           cursor: pointer;
         }
@@ -252,7 +222,7 @@ const WalletConnectButton = () => {
         #buttonName {
           width: 10rem;
           height: 3.5rem;
-          background-color: ${theme.MainColor};
+          background-color: ${theme.MainColor2};
           display: flex;
           justify-content: center;
           align-items: center;
